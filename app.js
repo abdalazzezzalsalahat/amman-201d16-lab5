@@ -125,7 +125,9 @@ testMultiplyArray(testArray);
 
 /////////////////////////////////////
 /* STRETCH GOAL: Problem 6
-Write a function called multiplyAnyArray() that takes an array of numbers of any length as its argument and returns an array whose first element is the product of those numbers, and the second element is a string that EXACTLY follows this example and concatenates a message using the arguments that were passed into the function:
+Write a function called multiplyAnyArray() that takes an array of numbers of any length as its argument and returns an array 
+whose first element is the product of those numbers, 
+and the second element is a string that EXACTLY follows this example and concatenates a message using the arguments that were passed into the function:
 
 "The numbers 1,2,3,4,5 have a product of 120."
 
@@ -140,9 +142,14 @@ let testDynamicArray = [1, 2, 3, 4, 5]; //eslint-disable-line
 
 function multiplyAnyArray(dynamicArray) {
   //eslint-disable-line
+  let stretchArrayMulti = 1;
+  for (let c = 0; c < testDynamicArray.length; c++){
+    stretchArrayMulti *= testDynamicArray[c];
+  }
+  return [stretchArrayMulti, 'The numbers ' + testDynamicArray + ' have a product of ' + stretchArrayMulti + '.'];
 }
 
 // Here is the test for multiplyArray(); uncomment it to run it
-// testMultiplyAnyArray(testDynamicArray);
+testMultiplyAnyArray(testDynamicArray);
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. You're done! Submit the link to the repo following the instructions in Canvas.
